@@ -69,6 +69,10 @@ library(lattice)
 stepsdata <- aggregate(datana$steps, by =list(datana$date), FUN = sum, na.rm =TRUE)
 names(stepsdata) <- c("date", "total.steps")
 histogram(stepsdata$total.steps,col = 'red', xlab = "Total Steps",ylab = "Frequency", main ="total number of steps taken each day", breaks =  20)
+stepsmean <- mean(stepsdata$total.steps, na.rm = TRUE)
+stepsmedian <- median(stepsdata$total.steps, na.rm = TRUE)
+stepsmean
+stepsmedian
 ```
 ## Are there differences in activity patterns between weekdays and weekends?
 

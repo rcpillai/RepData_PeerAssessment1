@@ -111,6 +111,24 @@ histogram(stepsdata$total.steps,col = 'red', xlab = "Total Steps",ylab = "Freque
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+
+```r
+stepsmean <- mean(stepsdata$total.steps, na.rm = TRUE)
+stepsmedian <- median(stepsdata$total.steps, na.rm = TRUE)
+stepsmean
+```
+
+```
+## [1] 10766.19
+```
+
+```r
+stepsmedian
+```
+
+```
+## [1] 10766.19
+```
 ## Are there differences in activity patterns between weekdays and weekends?
 
 Using the above dataset to find the day of the week for each measurement
